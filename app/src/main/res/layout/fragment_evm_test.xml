@@ -1,0 +1,743 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?colorPrimaryContainer"
+    tools:context=".MainFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            >
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:tint="?colorPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/baseline_security_24"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Transaction"
+                android:textColor="@color/acTextColorPrimary"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/sendNativeTokenLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/ac_demo_bg_card"
+            android:orientation="vertical"
+            android:padding="16dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Send Native Token"
+                android:textColor="@color/acTextColorPrimary"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/grey_4"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Receiver Address"
+                android:textColor="@color/acTextColorPrimary"
+                />
+
+            <EditText
+                android:id="@+id/nativeReceiver"
+                style="@style/CustomInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="0xB0e8d0a26920DF63AD2be1b21269b798846183d6"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:hint="Token Amount"
+                android:textColor="@color/acTextColorPrimary"
+                />
+
+            <EditText
+                android:id="@+id/nativeAmount"
+                style="@style/CustomInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:hint="0.0001"
+                android:inputType="numberDecimal"
+                android:text="0.0001"
+                />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                >
+
+
+                <Button
+                    android:id="@+id/sendNative"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:text="Send"
+                    />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/sendERC20TokenLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/ac_demo_bg_card"
+            android:orientation="vertical"
+            android:padding="16dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Send ERC20 Token"
+                android:textColor="@color/acTextColorPrimary"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/grey_4"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Receiver Address"
+                android:textColor="@color/acTextColorPrimary"
+                />
+
+            <EditText
+                android:id="@+id/erc20Receiver"
+                style="@style/CustomInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="0xB0e8d0a26920DF63AD2be1b21269b798846183d6"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:hint="Token Amount"
+                android:textColor="@color/acTextColorPrimary"
+                />
+
+            <EditText
+                android:id="@+id/erc20Amount"
+                style="@style/CustomInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:hint="0.0001"
+                android:text="0.0001"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:hint="Contract Address"
+                android:textColor="@color/acTextColorPrimary"
+                />
+
+            <EditText
+                android:id="@+id/erc20ContractAddress"
+                style="@style/CustomInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="0x326C977E6efc84E512bB9C30f76E30c160eD06FB"
+                />
+
+            <Button
+                android:id="@+id/sendERC20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Send"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/approveERC20TokenLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/ac_demo_bg_card"
+            android:orientation="vertical"
+            android:padding="16dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Approve ERC20 Token"
+                android:textColor="@color/acTextColorPrimary"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/grey_4"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Receiver Address"
+                android:textColor="@color/acTextColorPrimary"
+                />
+
+            <EditText
+                android:id="@+id/approveERC20Receiver"
+                style="@style/CustomInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="0xB0e8d0a26920DF63AD2be1b21269b798846183d6"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:hint="Token Amount"
+                android:textColor="@color/acTextColorPrimary"
+                />
+
+            <EditText
+                android:id="@+id/approveERC20Amount"
+                style="@style/CustomInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:inputType="numberDecimal"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:hint="Contract Address"
+                android:textColor="@color/acTextColorPrimary"
+                />
+
+            <EditText
+                android:id="@+id/approveERC20ContractAddress"
+                style="@style/CustomInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                />
+
+            <Button
+                android:id="@+id/approveERC20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Send"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/sendERC721TokenLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/ac_demo_bg_card"
+            android:orientation="vertical"
+            android:padding="16dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Send ERC721 Token"
+                android:textColor="@color/acTextColorPrimary"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/grey_4"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Receiver Address"
+                android:textColor="@color/acTextColorPrimary"
+                />
+
+            <EditText
+                android:id="@+id/erc721Receiver"
+                style="@style/CustomInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:hint="Receiver Address"
+                android:text="0xB0e8d0a26920DF63AD2be1b21269b798846183d6"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:hint="Token ID"
+                android:textColor="@color/acTextColorPrimary"
+                />
+
+            <EditText
+                android:id="@+id/erc721TokenId"
+                style="@style/CustomInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:inputType="number"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:hint="Contract Address"
+                android:textColor="@color/acTextColorPrimary"
+                />
+
+            <EditText
+                android:id="@+id/erc721ContractAddress"
+                style="@style/CustomInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                />
+
+            <Button
+                android:id="@+id/sendERC721"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Send"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/sendERC1155TokenLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/ac_demo_bg_card"
+            android:orientation="vertical"
+            android:padding="16dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Send ERC1155 Token"
+                android:textColor="@color/acTextColorPrimary"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/grey_4"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Receiver Address"
+                android:textColor="@color/acTextColorPrimary"
+                />
+
+            <EditText
+                android:id="@+id/erc1155Receiver"
+                style="@style/CustomInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="0xB0e8d0a26920DF63AD2be1b21269b798846183d6"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:hint="Token ID"
+                android:textColor="@color/acTextColorPrimary"
+                />
+
+            <EditText
+                android:id="@+id/erc1155TokenId"
+                style="@style/CustomInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:inputType="number"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:hint="Contract Address"
+                android:textColor="@color/acTextColorPrimary"
+                />
+
+            <EditText
+                android:id="@+id/erc1155ContractAddress"
+                style="@style/CustomInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                />
+
+            <Button
+                android:id="@+id/sendERC1155"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Send"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/contractCallLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/ac_demo_bg_card"
+            android:orientation="vertical"
+            android:padding="16dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Contract Call"
+                android:textColor="@color/acTextColorPrimary"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/grey_4"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Contract Address"
+                android:textColor="@color/acTextColorPrimary"
+                />
+
+            <EditText
+                android:id="@+id/contractAddress"
+                style="@style/CustomInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:hint="Contract Method"
+                android:textColor="@color/acTextColorPrimary"
+                />
+
+            <EditText
+                android:id="@+id/contractMethod"
+                style="@style/CustomInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:hint="Method Params (split with ',')"
+                android:textColor="@color/acTextColorPrimary"
+                />
+
+            <EditText
+                android:id="@+id/methodParams"
+                style="@style/CustomInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:hint="Contract ABI"
+                android:textColor="@color/acTextColorPrimary"
+                />
+
+            <EditText
+                android:id="@+id/contractABI"
+                style="@style/CustomInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                >
+
+                <CheckBox
+                    android:id="@+id/writeContract"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Write"
+                    />
+
+                <Button
+                    android:id="@+id/contractCall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:text="Query"
+                    />
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            >
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:tint="?colorPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/baseline_security_24"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Signature"
+                android:textColor="@color/acTextColorPrimary"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/personalSignLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/ac_demo_bg_card"
+            android:orientation="vertical"
+            android:padding="16dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Personal Sign"
+                android:textColor="@color/acTextColorPrimary"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/grey_4"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:hint="Message"
+                android:textColor="@color/acTextColorPrimary"
+                />
+
+            <EditText
+                android:id="@+id/personalSignMessage"
+                style="@style/CustomInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:maxLines="10"
+                android:minHeight="88dp"
+                />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                >
+
+                <CheckBox
+                    android:id="@+id/personalSignUniq"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Uniq"
+                    />
+
+                <Button
+                    android:id="@+id/personalSign"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:text="Sign"
+                    />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/signTypedDataLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/ac_demo_bg_card"
+            android:orientation="vertical"
+            android:padding="16dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sign Typed Data"
+                android:textColor="@color/acTextColorPrimary"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/grey_4"
+                />
+
+            <EditText
+                android:id="@+id/signTypedDataMessage"
+                style="@style/CustomInput"
+                android:layout_width="match_parent"
+                android:layout_height="88dp"
+                android:layout_marginTop="6dp"
+                android:maxLines="10"
+                />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                >
+
+                <CheckBox
+                    android:id="@+id/signTypedDataUniq"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Uniq"
+                    />
+
+                <Button
+                    android:id="@+id/signTypedData"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:text="Sign"
+                    />
+
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</ScrollView>
