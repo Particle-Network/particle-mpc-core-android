@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/acBackgroundColor"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/changeMasterPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:height="50dp"
+        android:foreground="?attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:text="Change Master Password"
+        android:textColor="@color/acTextColorPrimary" />
+
+    <TextView
+        android:id="@+id/setMasterPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:height="50dp"
+        android:foreground="?attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:text="Set Master Password"
+        android:textColor="@color/acTextColorPrimary" />
+
+    <TextView
+        android:id="@+id/accountSecurity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:height="50dp"
+        android:foreground="?attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:text="Account Security"
+        android:textColor="@color/acTextColorPrimary" />
+
+    <TextView
+        android:id="@+id/apperance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:height="50dp"
+        android:foreground="?attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:text="Apperance"
+        android:textColor="@color/acTextColorPrimary" />
+
+    <TextView
+        android:id="@+id/language"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:height="50dp"
+        android:foreground="?attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:text="Language"
+        android:textColor="@color/acTextColorPrimary" />
+
+    <TextView
+        android:id="@+id/disconnect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:height="50dp"
+        android:foreground="?attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:text="Disconnect"
+        android:textColor="@color/acTextColorPrimary" />
+
+</LinearLayout>
